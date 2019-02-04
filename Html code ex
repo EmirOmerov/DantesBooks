@@ -1,0 +1,88 @@
+ <form action="/submit-cat-photo">
+    <input type="text" placeholder="cat photo URL">//forma za upis teksta
+	 <button type="submit">Submit</button>//submit dugme
+  </form>
+  
+  <input type = "text" required>
+  
+  
+ <form>
+    <label for="indoor">
+    <input id="indoor" type="radio" name="indoor-outdoor"> indoor
+    </label>
+    <label for="outdoor">
+    <input id="outdoor" type="radio" name="indoor-outdoor">  outdoor
+    </label>
+ </form> // radio button 
+ 
+ 
+ 
+ scrolling text vjezba!
+ var message = "Ako vjezbas, uspjet ces! ";
+message+="jesi li spreman?";
+var space ="...";
+var position=0;
+function scroller(){
+  var newtext=message.substring(position,message.length)+
+  space+message.substring(0,position);
+  var td = document.getElementById("tabledata");
+  td.firstChild.nodeValue = newtext;
+  position++;
+  if (position>message.length) {
+    position=0;
+  }
+  window.setTimeout(scroller,500);
+
+}
+
+html kod za scrolling text
+<html>
+<head>
+	<title>Tabs</title>
+	<script type="text/javascript"></script>
+	<script src="skript.js"></script>
+</head>
+<body>
+<h1>JavaScript-vjezba1</h1>
+	<form>
+	<input type="button" value="Pritisni" onclick="funky()">
+	</form>
+	<body bgColor="darkgreen" onload="scroller();">
+	<table border="1">
+	<tr>
+	<td id="tabledata" bgcolor="white">message goes here</td>
+	</tr>
+	</table>
+
+</body>
+</html>
+
+
+//blink around element
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+ 
+  
